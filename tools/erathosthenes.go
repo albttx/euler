@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package primes
 
 func eratosthenes(limit int) []int {
 	tab := make([]bool, limit+1)
@@ -15,17 +13,4 @@ func eratosthenes(limit int) []int {
 		}
 	}
 	return ret
-}
-
-func main() {
-	var limit int = 2000000
-	var primes []int
-	var sum int
-
-	primes = eratosthenes(limit)
-	sum = 0
-	for _, e := range primes {
-		sum += e
-	}
-	fmt.Println("The sum of the", limit, "th primes is", sum)
 }
